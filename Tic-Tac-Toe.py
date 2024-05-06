@@ -14,10 +14,27 @@ def stirring_time(mix_slow_or_fast):
     print("There's flour everywhere! This is a mess, you're very bad at making cookies.")
     exit()
  return mix_slow_or_fast
+def baking_temperature(temperature):
+    # Convert temperature to an integer
+    temperature = int(temperature)
+    
+    if temperature == 350:
+        print("And the cookies are in! Mmmm, I can already smell them. Yum!")
+    elif temperature < 350:
+        print("Yuck, the cookies are underbaked! Can't you listen? Idiot.")
+        exit()
+    else:
+        print("They're so burnt they're black! And hard as a rock. Dude, you ruined cookie day.")
+        exit()
+    return temperature
+
+
+
 
 print('***Lets make cookies!*** A text adventure game! Are you ready?')
 a = input()
 getting_started(a)
 b = input()
 stirring_time(b)
-
+c = input()
+baking_temperature(c)
