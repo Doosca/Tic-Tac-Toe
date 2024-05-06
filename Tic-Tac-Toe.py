@@ -20,6 +20,7 @@ def baking_temperature(temperature):
     
     if temperature == 350:
         print("And the cookies are in! Mmmm, I can already smell them. Yum!")
+        print("Perfectly baked! They're going to cool down now. Be patient and dont eat them too soon ok?")
     elif temperature < 350:
         print("Yuck, the cookies are underbaked! Can't you listen? Idiot.")
         exit()
@@ -27,6 +28,14 @@ def baking_temperature(temperature):
         print("They're so burnt they're black! And hard as a rock. Dude, you ruined cookie day.")
         exit()
     return temperature
+def cooling_cookies(waiting):
+   if waiting.lower() in ["no"]:
+      print("Evil voice: NOOOO! You've bested me! You win!")
+      print("You patiently waited for your cookies, very good! Now you're able to comfortably eat the delectable treats after they cooled!")
+   else:
+      print("Evil voice: Muahaha! Fool! Since they were so hot they burned off your tounge! Take that!")
+      exit()
+   return waiting
 
 
 
@@ -38,3 +47,5 @@ b = input()
 stirring_time(b)
 c = input()
 baking_temperature(c)
+d = input('Evil voice: Those cookies do look really yummy, will you take one? Just one for now no one will notice...')
+cooling_cookies(d)
